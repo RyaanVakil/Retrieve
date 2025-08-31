@@ -45,7 +45,6 @@ nav ul li a {
   position: relative;
 }
 
-/* Modify the after pseudo-element to not apply to links containing buttons */
 nav ul li a:not(:has(button))::after {
   content: '';
   position: absolute;
@@ -127,7 +126,7 @@ nav ul li a:not(:has(button)):hover::after {
     top: 40px;
     left: -100%;
     opacity: 0;
-    z-index: 9; /* Increase the z-index to ensure it's above the navbar */
+    z-index: 9; 
   }
 
   nav ul.active{

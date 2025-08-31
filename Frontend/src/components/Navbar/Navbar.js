@@ -7,7 +7,7 @@ const Navbar = () => {
   console.log('Rendering Navbar component...');
   const [clicked, setClicked] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false); // Add state for submenu visibility
-  const isAuthenticated = localStorage.getItem('token'); // Or however you store auth state
+  const isAuthenticated = localStorage.getItem('token'); 
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -59,7 +59,7 @@ const Navbar = () => {
                 <p>Settings</p>
               </Link>
               <Link to="#" className='sub-menu-link' onClick={() => {
-                localStorage.removeItem('token'); // Or however you handle logout
+                localStorage.removeItem('token'); 
                 window.location.href = '/';
               }}>
                 <p>Logout</p>

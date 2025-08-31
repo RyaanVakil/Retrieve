@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import FileUpload from '../../components/fileupload/FileUpload';
-import FileList from '../../components/filelist/FileList'; // We will create this component next
+import FileList from '../../components/filelist/FileList'; 
 import axios from 'axios';
-import './Home.css'; // Create this file for styling
+import './Home.css'; 
 
 const Home = () => {
   const [files, setFiles] = useState([]);

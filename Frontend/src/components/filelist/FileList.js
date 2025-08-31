@@ -1,5 +1,5 @@
 import React from 'react';
-import './FileList.css'; // Create this file for styling
+import './FileList.css'; 
 
 const FileList = ({ files }) => {
   if (!files || files.length === 0) {
@@ -11,7 +11,6 @@ const FileList = ({ files }) => {
       <ul>
         {files.map(file => (
           <li key={file._id} className="file-item">
-            {/* Assuming your file object has a 'url' and 'originalName' property */}
             <a href={file.url} target="_blank" rel="noopener noreferrer">
               {file.originalName}
             </a>

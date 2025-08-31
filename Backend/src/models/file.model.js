@@ -5,7 +5,6 @@ const fileSchema = mongoose.Schema(
         url: {
             type: String,
         },
-        // --- ADD THIS FIELD ---
         originalName: {
             type: String,
             required: true,

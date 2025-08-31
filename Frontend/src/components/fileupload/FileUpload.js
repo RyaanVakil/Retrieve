@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './FileUpload.css';
 
-// MODIFIED: Receive the onUploadSuccess function as a prop
 const FileUpload = ({ onUploadSuccess }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [error, setError] = useState(null);
@@ -44,7 +43,6 @@ const FileUpload = ({ onUploadSuccess }) => {
         setSelectedFile(null);
         setError(null);
 
-        // ADDED: Call the function passed from the parent (Home.js)
         // This is the key step that updates the UI instantly.
         if (onUploadSuccess) {
             // Pass the new file data from the response back to the Home component

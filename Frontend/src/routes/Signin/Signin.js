@@ -28,13 +28,12 @@ const Signin = ({ setToken }) => {
     try {
         const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/users/login`, formData);
         
-        // IMPORTANT: Adjust this if your API response is different
         const accessToken = response.data.data.accessToken;
 
         if (accessToken) {
             // Save the token to localStorage as before
             localStorage.setItem('token', accessToken);
-            // ADDED: Update the state in the parent App.js component
+           
             setToken(accessToken);
             // Navigation will now work correctly
             navigate('/home');

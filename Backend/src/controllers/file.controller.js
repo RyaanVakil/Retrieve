@@ -40,12 +40,6 @@ const fileUpload = asyncHandler(async (req, res) => {
         throw new ApiError(500, "Internal Server Error!!");
     }
     
-    // This part seems incorrect for a user model, assuming 'allFiles' is the correct field
-    // user.allVideos.push(file._id) 
-    // user.save({validateBeforeSave:false})
-
-    // This cron job seems designed to run for a specific user after one upload, which might not be intended.
-    // Consider moving this to a global, recurring job.
     const cronJob = cron.schedule('* * * * *', () => {
         const delFile = deleteExpiredFiles(user._id);
         if (delFile == 1) {
@@ -59,7 +53,7 @@ const fileUpload = asyncHandler(async (req, res) => {
     return res.status(200).json(new ApiResponse(200, fileAsset, "File has been uploaded successfully"));
 });
 
-// --- ADD THIS NEW FUNCTION ---
+
 const getAllFiles = asyncHandler(async (req, res) => {
     // Find all files where the owner matches the logged-in user's ID
     const files = await File.find({ owner: req.user._id }).sort({ createdAt: -1 });
@@ -73,5 +67,4 @@ const getAllFiles = asyncHandler(async (req, res) => {
 });
 
 
-// MODIFIED: Export the new function
 export { fileUpload, getAllFiles };
