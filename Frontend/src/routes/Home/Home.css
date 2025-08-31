@@ -1,0 +1,46 @@
+.home-container {
+  padding-top: 100px;
+    padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Styles for the view when the user has no files */
+.new-user-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Styles for the split view when the user has files */
+.existing-user-view {
+  display: flex;
+  gap: 2rem;
+  text-align: left;
+}
+
+.upload-panel {
+  flex: 1; /* Takes up 1 part of the space */
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.list-panel {
+  flex: 2; /* Takes up 2 parts of the space, making it wider */
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}

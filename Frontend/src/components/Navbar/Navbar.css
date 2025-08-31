@@ -1,0 +1,156 @@
+nav {
+  width: 100%;
+  background: rgba(242, 249, 247, 0.95);
+  backdrop-filter: blur(10px);
+  color: black;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.menu-icons {
+  margin-right: 20px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  position: relative;
+}
+
+/* Modify the after pseudo-element to not apply to links containing buttons */
+nav ul li a:not(:has(button))::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #6524EB;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:not(:has(button)):hover::after {
+  width: 100%;
+}
+
+.user-pic {
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.user-pic:hover {
+  color: #6524EB;
+  transform: scale(1.1);
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  width: 250px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sub-menu-wrap.show {
+  max-height: 400px;
+}
+
+.sub-menu {
+  padding: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+.sub-menu-link:hover {
+  padding-left: 5px;
+  color: #6524EB;
+}
+
+.menu-icons{
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background: #F2F9F7;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: -100%;
+    opacity: 0;
+    z-index: 9; /* Increase the z-index to ensure it's above the navbar */
+  }
+
+  nav ul.active{
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+  }
+
+  nav ul li {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid grey;
+  }
+
+  .menu-icons{
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-icons i{
+    font-size: 1.2rem;
+  }
+}

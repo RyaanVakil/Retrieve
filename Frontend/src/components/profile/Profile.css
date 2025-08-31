@@ -1,0 +1,56 @@
+/* Profile.css */
+
+.contain {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 100px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #4602cd;
+  }
+  
+  .profile-image {
+    width: 200px;
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+  .form-container {
+    flex: 3;
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center elements horizontally */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  p{
+    margin-bottom: 20px;
+  }
+  

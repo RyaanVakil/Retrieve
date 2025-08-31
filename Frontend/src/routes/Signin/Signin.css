@@ -1,0 +1,57 @@
+.signin-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; 
+  }
+  
+  .signin-image-container {
+    flex: 1;
+  }
+  
+  .signin-image {
+    width: 100%; /* Adjust image width as needed */
+    max-width: 350px; /* Adjust max-width as needed */
+    border-radius: 8px; 
+    margin-left: 90px;
+    margin-top: 50px;/* Add border radius for image */
+  }
+  
+  .signin-form-container {
+    flex: 1;
+    padding: 20px; /* Add padding as needed */
+  }
+  
+  .signin-form-container h1 {
+    text-align: center; /* Center the heading */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Add margin between form groups */
+  }
+  
+  label {
+    display: block; /* Labels appear on top of the input fields */
+  }
+  
+  .form-control {
+    width: 100%; /* Set input fields width to fill container */
+    padding: 10px; /* Add padding as needed */
+    border: 1px solid #ccc; /* Add border to input fields */
+    border-radius: 5px; /* Add border radius for input fields */
+  }
+  
+  .btn-primary {
+    width: 100%; /* Set button width to fill container */
+    padding: 10px; /* Add padding as needed */
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius for button */
+    cursor: pointer; /* Add cursor pointer on hover */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Change button background color on hover */
+  }
+  
